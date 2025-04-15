@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ksk Cloth Rental - Order</title>
+    <link rel="stylesheet" href="krn.css">
+</head>
+<body>
+    <header>
+        <h1>Ksk Cloth Rental - Order</h1>
+    </header>
+    <section id="order-form">
+        <h2>Place Your Order</h2>
+        <form id="orderForm">
+            <label for="item">Selected Item:</label><br>
+            <input type="text" id="item" name="item" readonly><br><br>
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address" required></textarea><br><br>
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+            <label for="payment">Payment Method:</label><br>
+            <select id="payment" name="payment" required>
+                <option value="">Select Payment</option>
+                <option value="cash">Cash on Delivery</option>
+                <option value="upi">UPI</option>
+                <option value="card">Credit/Debit Card</option>
+            </select><br><br>
+            <button type="submit">Confirm Order</button>
+        </form>
+        <p id="message"></p>
+    </section>
+    <script src="chndu.js"></script>
+</body>
+</html>
