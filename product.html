@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ksk Cloth Rental - Product Details</title>
+    <link rel="stylesheet" href="krn.css">
+</head>
+<body>
+    <header>
+        <h1>Ksk Cloth Rental</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="product-detail">
+        <div class="product-box">
+            <img id="product-image" src="" alt="Product Image">
+            <div class="product-info">
+                <h2 id="product-title"></h2>
+                <p id="product-price"></p>
+                <p id="product-size"></p>
+                <p id="product-description">Perfect for weddings and special occasions, this outfit is available for rent at an affordable price.</p>
+                <button id="order-button">Order Now</button>
+            </div>
+        </div>
+        <div class="reviews">
+            <h3>Customer Reviews</h3>
+            <div id="review-list"></div>
+            <div class="review-form">
+                <h4>Write a Review</h4>
+                <textarea id="review-text" placeholder="Your review..." required></textarea>
+                <label for="rating">Rating:</label>
+                <select id="rating" required>
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="2">2 Stars</option>
+                    <option value="1">1 Star</option>
+                </select>
+                <button onclick="submitReview()">Submit Review</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>© 2025 Ksk Cloth Rental. All rights reserved.</p>
+    </footer>
+    <script src="chandu.js"></script>
+</body>
+</html>
