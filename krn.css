@@ -14,29 +14,29 @@ header {
     background: linear-gradient(to right, #ff6b6b, #4a4a4a);
     color: white;
     text-align: center;
-    padding: 2rem;
+    padding: 1.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
 }
 
 nav ul {
     list-style: none;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 1.5rem;
+    margin: 0 1rem;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     transition: color 0.3s;
 }
 
@@ -45,24 +45,24 @@ nav ul li a:hover {
 }
 
 section {
-    padding: 3rem 1rem;
+    padding: 2rem 1rem;
     text-align: center;
 }
 
 #home {
     background: url('https://via.placeholder.com/1200x400?text=Festive+Background') no-repeat center/cover;
     color: white;
-    padding: 4rem 1rem;
+    padding: 3rem 1rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 #home h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 #home p {
-    font-size: 1.2rem;
-    max-width: 600px;
+    font-size: 1rem;
+    max-width: 90%;
     margin: 1rem auto;
 }
 
@@ -73,17 +73,18 @@ section {
 .service-container {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .service-item {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    width: 250px;
+    padding: 1rem;
+    width: 100%;
+    max-width: 300px;
     transition: transform 0.3s;
 }
 
@@ -93,30 +94,33 @@ section {
 
 .service-item img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .service-item h3 {
-    margin: 1rem 0 0.5rem;
-    font-size: 1.5rem;
+    margin: 0.8rem 0 0.4rem;
+    font-size: 1.3rem;
 }
 
 .service-item p {
     color: #555;
+    font-size: 0.9rem;
 }
 
 .service-item button {
     background: #ff6b6b;
     color: white;
     border: none;
-    padding: 0.7rem 1.5rem;
+    padding: 0.6rem 1.2rem;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
-    margin-top: 1rem;
+    font-size: 0.9rem;
+    margin-top: 0.8rem;
     transition: background 0.3s;
+    width: 100%;
 }
 
 .service-item button:hover {
@@ -126,15 +130,15 @@ section {
 #contact {
     background: linear-gradient(to right, #4a4a4a, #ff6b6b);
     color: white;
-    padding: 3rem 1rem;
+    padding: 2rem 1rem;
 }
 
 #contact h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 #contact p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: 0.5rem 0;
 }
 
@@ -146,10 +150,11 @@ footer {
     position: relative;
     width: 100%;
 }
+
 #order-form {
-    max-width: 500px;
-    margin: 2rem auto;
-    padding: 2rem;
+    max-width: 90%;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -157,25 +162,31 @@ footer {
 
 #order-form label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
     font-weight: bold;
+    font-size: 0.9rem;
 }
 
-#order-form input, #order-form textarea, #order-form select {
+#order-form input,
+#order-form textarea,
+#order-form select {
     width: 100%;
     padding: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 0.9rem;
 }
 
 #order-form button {
     background: #ff6b6b;
     color: white;
     border: none;
-    padding: 0.7rem 1.5rem;
+    padding: 0.6rem 1.2rem;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 0.9rem;
+    width: 100%;
 }
 
 #order-form button:hover {
@@ -183,19 +194,197 @@ footer {
 }
 
 #order-form #message {
-    margin-top: 1rem;
+    margin-top: 0.8rem;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+button {
+    background-color: #d4af37;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #b38f2c;
+}
+
+/* Product Detail Page Styles */
+.product-detail {
+    max-width: 90%;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.product-box img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.product-info {
+    text-align: center;
+}
+
+.product-info h2 {
+    font-size: 1.8rem;
+    margin: 0 0 0.8rem;
     color: #333;
 }
-button {
-  background-color: #d4af37;
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+
+.product-info p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.4rem 0;
 }
-button:hover {
-  background-color: #b38f2c;
+
+.product-info button {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 0.8rem;
+    width: 100%;
+}
+
+.product-info button:hover {
+    background: #e55a5a;
+}
+
+.reviews {
+    margin-top: 1.5rem;
+}
+
+.reviews h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.review-item {
+    border-bottom: 1px solid #eee;
+    padding: 0.8rem 0;
+}
+
+.review-item p {
+    margin: 0.4rem 0;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.review-form {
+    margin-top: 1.5rem;
+}
+
+.review-form textarea {
+    width: 100%;
+    height: 80px;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.review-form select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.review-form button {
+    background: #d4af37;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+.review-form button:hover {
+    background: #b38f2c;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul li {
+        margin: 0 0.5rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    #home h2 {
+        font-size: 1.8rem;
+    }
+
+    #home p {
+        font-size: 0.9rem;
+    }
+
+    .service-container {
+        gap: 1rem;
+    }
+
+    .service-item {
+        max-width: 90%;
+    }
+
+    .product-box {
+        flex-direction: column;
+    }
+
+    .product-box img {
+        max-width: 100%;
+    }
+
+    .product-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .reviews h3 {
+        font-size: 1.3rem;
+    }
+
+    #order-form {
+        padding: 1rem;
+    }
+
+    #contact h2 {
+        font-size: 1.5rem;
+    }
+
+    #contact p {
+        font-size: 0.9rem;
+    }
 }
