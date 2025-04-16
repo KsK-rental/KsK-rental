@@ -56,14 +56,25 @@ section {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-#home h2 {
+#home h2.welcome-text {
     font-size: 2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-#home p {
+#home h2.welcome-text:hover {
+    transform: scale(1.05);
+    color: #ffd700;
+}
+
+#home p.tagline {
     font-size: 1rem;
     max-width: 90%;
     margin: 1rem auto;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    padding: 0.8rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 #services {
@@ -115,16 +126,18 @@ section {
     color: white;
     border: none;
     padding: 0.6rem 1.2rem;
-    border-radius: 5px;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     font-size: 0.9rem;
     margin-top: 0.8rem;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s;
     width: 100%;
 }
 
 .service-item button:hover {
     background: #e55a5a;
+    transform: translateY(-2px);
 }
 
 #contact {
@@ -156,8 +169,8 @@ footer {
     margin: 1.5rem auto;
     padding: 1.5rem;
     background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 #order-form label {
@@ -174,8 +187,13 @@ footer {
     padding: 0.5rem;
     margin-bottom: 0.8rem;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
     font-size: 0.9rem;
+}
+
+#order-form select:disabled {
+    opacity: 0.5;
 }
 
 #order-form button {
@@ -183,14 +201,17 @@ footer {
     color: white;
     border: none;
     padding: 0.6rem 1.2rem;
-    border-radius: 5px;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     font-size: 0.9rem;
     width: 100%;
+    transition: background 0.3s, transform 0.2s;
 }
 
 #order-form button:hover {
     background: #e55a5a;
+    transform: translateY(-2px);
 }
 
 #order-form #message {
@@ -204,15 +225,17 @@ button {
     color: white;
     border: none;
     padding: 0.8rem 1.5rem;
-    border-radius: 6px;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s;
     font-size: 1rem;
 }
 
 button:hover {
     background-color: #b38f2c;
+    transform: translateY(-2px);
 }
 
 /* Product Detail Page Styles */
@@ -221,7 +244,7 @@ button:hover {
     margin: 1.5rem auto;
     padding: 1.5rem;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -261,15 +284,18 @@ button:hover {
     color: white;
     border: none;
     padding: 0.7rem 1.5rem;
-    border-radius: 5px;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     font-size: 1rem;
     margin-top: 0.8rem;
     width: 100%;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .product-info button:hover {
     background: #e55a5a;
+    transform: translateY(-2px);
 }
 
 .reviews {
@@ -301,7 +327,8 @@ button:hover {
     height: 80px;
     padding: 0.5rem;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
     margin-bottom: 0.8rem;
     font-size: 0.9rem;
 }
@@ -311,7 +338,8 @@ button:hover {
     padding: 0.5rem;
     margin-bottom: 0.8rem;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
     font-size: 0.9rem;
 }
 
@@ -320,14 +348,17 @@ button:hover {
     color: white;
     border: none;
     padding: 0.6rem 1.2rem;
-    border-radius: 5px;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     font-size: 0.9rem;
     width: 100%;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .review-form button:hover {
     background: #b38f2c;
+    transform: translateY(-2px);
 }
 
 /* Mobile Responsive Styles */
