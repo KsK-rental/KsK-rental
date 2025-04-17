@@ -220,6 +220,25 @@ footer {
     font-size: 0.9rem;
 }
 
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+#order-form button#razorpay-button {
+    background: #4a90e2;
+}
+
+#order-form button#razorpay-button:hover {
+    background: #3a80d2;
+}
+
+#order-form button#razorpay-button:disabled {
+    background: #a0a0a0;
+    cursor: not-allowed;
+}
+
 button {
     background-color: #d4af37;
     color: white;
