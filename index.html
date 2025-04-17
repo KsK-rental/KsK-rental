@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <title>KSK Rental clothes</title>
+    <title>KSK Wear & Care</title>
     <link rel="stylesheet" href="krn.css">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <h1>KSK Rental clothes </h1>
+        <h1>KSK Wear & Care</h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -22,8 +22,24 @@
 
     <!-- Home Section -->
     <section id="home">
-        <h2 class="welcome-text">Welcome to <b>KSK</b> Rental clothes</h2>
-        <p class="tagline">Hey friends! Heading to a wedding, birthday party, or a special date? Don’t worry! We’ve got your style covered. Explore our collection, choose your favorite, and get it delivered to your doorstep. Check your outfit first, then pay!</p>
+        <h2 class="welcome-text">Welcome to <b>KSK</b> Wear & Care</h2>
+        <p class="tagline">"Shaadi ho ya sagai, suit-boot ka jugaad humse ho jaaye!"
+
+            Arre bhai, har baar naye kapde kharidne ki kya zarurat?
+             bus rent karo, shine karo, aur budget bachao!
+            
+            Aur haan, sirf kapde hi nahi apke kpdo ke liye matching jewellery top quality skin care like 
+            sunscreem serums or protein powder tak, jo cheezein market me milti nahi ya online late se aati hain...
+            hum ek din me ghar tak pahucha dete hain!
+            
+            Samjho:
+            "Fashion ka jugaad bhi, daily use ka saamaan bhi – sab yahin milega, ekdum jhatpat!" 😎
+            
+            ➕ Pehn lo.
+            ➕ laga lo.
+            ➕ Style banao.
+            
+            KSK Wear &Care – Rent bhi, buy bhi, Swag bhi!</p>
     </section>
 
     <!-- Services Section -->
@@ -31,61 +47,61 @@
         <h2>Our Services</h2>
         <div class="service-container">
             <div class="service-item">
-                <img src="img/yello shoot.jpg" alt="Lehenga" onclick="viewProduct('Lehenga', 'beautiful yellow dress for girl', '₹400', 'img/yello shoot.jpg', 'M')">
-                <h3>beautiful yellow dress for girl</h3>
+                <img src="img/yello_shoot.jpg" alt="Lehenga" onclick="viewProduct('Lehenga', 'Beautiful Yellow Dress for Girl', '₹400', 'img/yello_shoot.jpg', 'M', 'rent', 'Perfect for weddings, this vibrant lehenga will make you shine.')">
+                <h3>Beautiful Yellow Dress for Girl</h3>
                 <p>Rent per day: ₹400</p>
                 <button onclick="orderNow('Lehenga')">Order Now</button>
             </div>
             <div class="service-item">
-                <img src="img/denim .jpg" alt="denim" onclick="viewProduct('denim', 'branded denim Shirt', '₹300', 'img/denim .jpg', 'M')">
-                <h3>branded denim Shirt</h3>
+                <img src="img/denim.jpg" alt="Denim" onclick="viewProduct('denim', 'Branded Denim Shirt', '₹300', 'img/denim.jpg', 'M', 'rent', 'Casual yet stylish denim shirt for any occasion.')">
+                <h3>Branded Denim Shirt</h3>
                 <p>Rent per day: ₹300</p>
                 <button onclick="orderNow('denim')">Order Now</button>
             </div>
             <div class="service-item">
-                <img src="img/kurta.png" alt="Kurta" onclick="viewProduct('Kurta', 'Kurta', '₹300', 'img/kurta.png', 'M')">
-                <h3>Kurta</h3>
-                <p>Rent per day: ₹300</p>
-                <button onclick="orderNow('Kurta')">Order Now</button>
+                <img src="img/aroma.jpg" alt="Sunscreen" onclick="viewProduct('sunscreen', 'Aroma Magic Sunscreen', '₹220', 'img/aroma.jpg', 'All Natural', 'buy', 'Protect your skin with this natural sunscreen.')">
+                <h3>Aroma Magic Sunscreen</h3>
+                <p>Buy: ₹220</p>
+                <button onclick="orderNow('sunscreen')">Order Now</button>
             </div>
             <div class="service-item">
-                <img src="img/tshirt.jpg" alt="T-shirt" onclick="viewProduct('T-shirt', 'T-shirt', '₹200', 'img/tshirt.jpg', 'M')">
+                <img src="img/tshirt.jpg" alt="T-shirt" onclick="viewProduct('T-shirt', 'T-shirt', '₹200', 'img/tshirt.jpg', 'M', 'rent', 'Comfortable and trendy t-shirt for casual wear.')">
                 <h3>T-shirt</h3>
                 <p>Rent per day: ₹200</p>
                 <button onclick="orderNow('T-shirt')">Order Now</button>
             </div>
             <div class="service-item">
-                <img src="img/yellokurta.jpg" alt="Kurta" onclick="viewProduct('Kurta', 'Kurta', '₹300', 'img/yellokurta.jpg', 'M')">
+                <img src="img/yellokurta.jpg" alt="Kurta" onclick="viewProduct('Kurta', 'Kurta', '₹300', 'img/yellokurta.jpg', 'M', 'rent', 'Traditional kurta for festive occasions.')">
                 <h3>Kurta</h3>
                 <p>Rent per day: ₹300</p>
                 <button onclick="orderNow('Kurta')">Order Now</button>
             </div>
             <div class="service-item">
-                <img src="https://via.placeholder.com/200x200?text=Blouse" alt="Blouse" onclick="viewProduct('Blouse', 'Blouse', '₹250', 'https://via.placeholder.com/200x200?text=Blouse', 'M')">
+                <img src="https://via.placeholder.com/200x200?text=Blouse" alt="Blouse" onclick="viewProduct('Blouse', 'Blouse', '₹250', 'https://via.placeholder.com/200x200?text=Blouse', 'M', 'rent', 'Elegant blouse to pair with sarees.')">
                 <h3>Blouse</h3>
                 <p>Rent per day: ₹250</p>
                 <button onclick="orderNow('Blouse')">Order Now</button>
             </div>
             <div class="service-item">
-                <img src="https://via.placeholder.com/200x200?text=Sherwani" alt="Sherwani" onclick="viewProduct('Sherwani', 'Sherwani', '₹700', 'https://via.placeholder.com/200x200?text=Sherwani', 'M')">
+                <img src="https://via.placeholder.com/200x200?text=Sherwani" alt="Sherwani" onclick="viewProduct('Sherwani', 'Sherwani', '₹700', 'https://via.placeholder.com/200x200?text=Sherwani', 'M', 'rent', 'Royal sherwani for weddings and events.')">
                 <h3>Sherwani</h3>
                 <p>Rent per day: ₹700</p>
                 <button onclick="orderNow('Sherwani')">Order Now</button>
             </div>
             <div class="service-item">
-                <img src="https://via.placeholder.com/200x200?text=Anarkali" alt="Anarkali" onclick="viewProduct('Anarkali', 'Anarkali', '₹650', 'https://via.placeholder.com/200x200?text=Anarkali', 'M')">
+                <img src="https://via.placeholder.com/200x200?text=Anarkali" alt="Anarkali" onclick="viewProduct('Anarkali', 'Anarkali', '₹650', 'https://via.placeholder.com/200x200?text=Anarkali', 'M', 'rent', 'Graceful anarkali suit for special occasions.')">
                 <h3>Anarkali</h3>
                 <p>Rent per day: ₹650</p>
                 <button onclick="orderNow('Anarkali')">Order Now</button>
             </div>
             <div class="service-item">
-                <img src="img/Jeans.jpg" alt="Jeans" onclick="viewProduct('Jeans', 'Jeans', '₹150', 'img/Jeans.jpg', 'M')">
+                <img src="img/jeans.jpg" alt="Jeans" onclick="viewProduct('Jeans', 'Jeans', '₹150', 'img/jeans.jpg', 'M', 'buy', 'Durable and stylish jeans for everyday wear.')">
                 <h3>Jeans</h3>
-                <p>Rent per day: ₹150</p>
+                <p>Buy: ₹150</p>
                 <button onclick="orderNow('Jeans')">Order Now</button>
             </div>
             <div class="service-item">
-                <img src="https://via.placeholder.com/200x200?text=Shirt" alt="Shirt" onclick="viewProduct('Shirt', 'Shirt', '₹180', 'https://via.placeholder.com/200x200?text=Shirt', 'M')">
+                <img src="https://via.placeholder.com/200x200?text=Shirt" alt="Shirt" onclick="viewProduct('Shirt', 'Shirt', '₹180', 'https://via.placeholder.com/200x200?text=Shirt', 'M', 'rent', 'Formal shirt for professional look.')">
                 <h3>Shirt</h3>
                 <p>Rent per day: ₹180</p>
                 <button onclick="orderNow('Shirt')">Order Now</button>
@@ -97,17 +113,19 @@
     <section id="contact">
         <h2>Contact Us</h2>
         <p>Reach us for bookings within 10-15 km!</p>
-        <p>Founders: Satish Verma, Karan Vaghel</p>
-        <p>Email: <a href="mailto:kskclothing@gmail.com">kskclothing@gmail.com</a> | Phone: +91 9981971917, 7869074078, 8349747627</p>
+        <p>Founders: Bunny, Satish Verma, Karan Vaghel</p>
+        <p>Email: <a href="/cdn-cgi/l/email-protection#82e9f1e9e1eeedf6eaebece5c2e5efe3ebeeace1edef"><span class="__cf_email__" data-cfemail="1b7068707877746f7372757c5b7c767a727735787476">[email&#160;protected]</span></a> | Phone: +91 9981971917, 7869074078, 8349747627</p>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 Ksk Rental cloths. All rights reserved.</p>
+        <p>© 2025 KSK Wear & Care. All rights reserved.</p>
     </footer>
 
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="chndu.js"></script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9310d99ee8c5bd25',t:'MTc0NDc3NjgwNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93135eeba9411d6a',t:'MTc0NDgwMzIzNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'931a8a3f9c1f53ed',t:'MTc0NDg3ODQxMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
