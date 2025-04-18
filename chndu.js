@@ -4,7 +4,7 @@ function orderNow(item) {
 }
 
 function viewProduct(name, title, price, image, size, type, description) {
-    localStorage.setItem('selectedProduct', JSON.stringify({ name, title, price, image, size, type, description }));
+    localStorage.setItem('selectedProduct', JSON.stringify({ name, title, price, image,  size, type, description }));
     window.location.href = 'product.html';
 }
 
@@ -15,30 +15,15 @@ function chatWithUs() {
     window.open(whatsappUrl, '_blank');
 }
 
+// 🧾 All products redirect to same Razorpay link
+const razorpayLink = "https://razorpay.me/@bunnyksk";
+
 function payWithRazorpay() {
-    const item = localStorage.getItem('selectedItem');
-    const product = JSON.parse(localStorage.getItem('selectedProduct') || '{}');
-    const amount = parseFloat(product.price.replace('₹', '')) * 100; // Convert to paise
-    const options = {
-        key: 'YOUR_RAZORPAY_KEY_ID', // Replace with your Razorpay key
-        amount: amount,
-        currency: 'INR',
-        name: 'KSK Wear & Care',
-        description: `Payment for ${item}`,
-        handler: function (response) {
-            alert(`Payment successful! Payment ID: ${response.razorpay_payment_id}`);
-            document.getElementById('message').innerText = 'Payment completed! Check your email for confirmation.';
-        },
-        prefill: {
-            name: document.getElementById('name').value,
-            contact: document.getElementById('phone').value
-        },
-        theme: {
-            color: '#ff6b6b'
-        }
-    };
-    const rzp = new Razorpay(options);
-    rzp.open();
+    if (razorpayLink) {
+        window.open(razorpayLink, "_blank");
+    } else {
+        alert("Payment link is not available. Contact support.");
+    }
 }
 
 document.getElementById('orderForm')?.addEventListener('submit', function(e) {
