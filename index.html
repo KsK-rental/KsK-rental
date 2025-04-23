@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <title>KSK Wear & Care</title>
     <link rel="stylesheet" href="krn.css">
 </head>
@@ -26,128 +26,121 @@
         <p class="tagline">"Shaadi ho ya sagai, suit-boot ka jugaad humse ho jaaye!"
 
             Arre bhai, har baar naye kapde kharidne ki kya zarurat?
-             bus  rent karo, shine karo, aur budget bachao!
-             Note:- " for every product you rent,you will need to provide an appropriate security deposit. 
-            
-            Aur haan, sirf kapde hi nahi apke kpdo ke liye matching jewellery top quality skin care like 
-            sunscreem serums or protein powder tak, jo cheezein market me milti nahi ya online late se aati hain...
+             bus rent karo, shine karo, aur budget bachao!
+             Note:- " for every product you rent, you will need to provide an appropriate security deposit.
+
+            Aur haan, sirf kapde hi nahi apke kpdo ke liye matching jewellery, top quality skin care like
+            sunscreen, serums or protein powder tak, jo cheezein market me milti nahi ya online late se aati hain...
             hum ek din me ghar tak pahucha dete hain!
-            
+
             Samjho:
             "Fashion ka jugaad bhi, daily use ka saamaan bhi – sab yahin milega, ekdum jhatpat!" 😎
-            
+
             ➕ Pehn lo.
-            ➕ laga lo.
+            ➕ Laga lo.
             ➕ Style banao.
-            
-            KSK Wear &Care – Rent bhi, buy bhi, Swag bhi!</p>
+
+            KSK Wear & Care – Rent bhi, buy bhi, Swag bhi!</p>
     </section>
 
     <!-- Services Section -->
     <section id="services">
         <h2>Our Services</h2>
         <div class="service-container">
-            <div class="service-item">
+            <div class="service-item" data-available="true">
                 <img src="img/yello_shoot.jpg" alt="Lehenga" onclick="viewProduct('Lehenga', 'Beautiful Yellow Dress for Girl', '₹400', 'img/yello_shootog.jpg', 'M', 'rent', 'Perfect for weddings, this vibrant lehenga will make you shine.')">
                 <h3>Beautiful Yellow Dress for Girl</h3>
                 <p>Rent per day: ₹400</p>
                 <button onclick="orderNow('Lehenga')">Order Now</button>
             </div>
-            <div class="service-item">
+            <div class="service-item" data-available="true">
                 <img src="img/denim.jpg" alt="Denim" onclick="viewProduct('denim', 'Branded Denim Shirt', '₹300', 'img/denimog.jpg', 'M', 'rent', 'Casual yet stylish denim shirt for any occasion.')">
                 <h3>Branded Denim Shirt</h3>
                 <p>Rent per day: ₹300</p>
                 <button onclick="orderNow('denim')">Order Now</button>
             </div>
-            <div class="service-item">
-               
+            <div class="service-item" data-available="true">
                 <img src="img/aroma.jpg" alt="Sunscreen" onclick="viewProduct('sunscreen', 'Aroma Magic Sunscreen', '₹220', 'img/aroma.jpg', 'All Natural', 'buy', 'Protect your skin with this natural sunscreen.')">
-                
                 <h3>Aroma Magic Sunscreen</h3>
-                <p>Buy: ₹220</p>
+                <p>Price: ₹220</p>
                 <button onclick="orderNow('sunscreen')">Order Now</button>
             </div>
-            <div class="service-item">
+            <div class="service-item" data-available="true">
                 <img src="img/shoot.jpg" alt="Lehenga set" onclick="viewProduct('Lehenga set', 'Lehenga set', '₹400', 'img/shootog.jpg', 'M', 'rent', 'Comfortable and trendy Lehenga set for shaadi and special occasions.')">
                 <h3>Lehenga set</h3>
                 <p>Rent per day: ₹200</p>
                 <button onclick="orderNow('Lehenga set')">Order Now</button>
             </div>
-            
-<div class="service-item">
-    <img src="img/hair.jpg" alt="Gatsby hair spray" onclick="viewProduct('Gatsby hair spray', 'Gatsby hair spray', '₹49', 'img/hair.jpg', '70ml left', 'buy', 'Gatsby hair spray maintain your style all day this bottle is lightly used some product left works perfectly nozzle functions smoothly ')">
-    <h3>Gatsby hair spray</h3>
-    <p> Original price-₹250 you get this for: ₹49</p>
-    <button onclick="orderNow('Gatsby hair spray')">Order Now</button>
-</div>
-
-            
-
-            <div class="service-item">
-                <img src="img/blackj.jpg" alt="Jacket for man" onclick="viewProduct('Jacket for man', 'Jacket for man', '₹250', 'img/blackjog.jpg', 'S', 'rent', '')">
+            <div class="service-item" data-available="true">
+                <img src="img/hair.jpg" alt="Gatsby hair spray" onclick="viewProduct('Gatsby hair spray', 'Gatsby hair spray', '₹49', 'img/hair.jpg', '70ml left', 'buy', 'Gatsby hair spray maintain your style all day this bottle is lightly used some product left works perfectly nozzle functions smoothly ')">
+                <h3>Gatsby hair spray</h3>
+                <p>Original price-₹250 you get this for: ₹49</p>
+                <button onclick="orderNow('Gatsby hair spray')">Order Now</button>
+            </div>
+            <div class="service-item" data-available="true">
+                <img src="img/blackj.webp" alt="Jacket for man" onclick="viewProduct('Jacket for man', 'Jacket for man', '₹250', 'img/blackjog.webp', 'S', 'rent', '')">
                 <h3>Jacket for man</h3>
                 <p>Rent per day: ₹300</p>
-                <button onclick="orderNow('Kurta')">Order Now</button>
+                <button onclick="orderNow('Jacket for man')">Order Now</button>
             </div>
-            <div class="service-item">
-                <img src="img/protien.jpg" alt="protien" onclick="viewProduct('protein powder', 'protein powder', '₹349', 'img/protien.jpg', '200g', 'buy', 'complete proten powder withvitamins & minerals kesar baadam flavour ')">
+            <div class="service-item" data-available="true">
+                <img src="img/protien.jpg" alt="protien" onclick="viewProduct('protein powder', 'protein powder', '₹290', 'img/protien.jpg', '200g', 'buy', 'complete proten powder withvitamins & minerals kesar baadam flavour ')">
                 <h3>Protoneuron protein</h3>
-                <p>buy: ₹349</p>
-                <button onclick="orderNow('protein')">Order Now</button>
+                <p>Price: ₹290</p>
+                <button onclick="orderNow('protein powder')">Order Now</button>
             </div>
-
-            <div class="service-item">
-                <img src="img/Allo_gold_plated.jpg" alt="Allo gold plated jawel set" onclick="viewProduct('Allo gold plated jawel set', 'Allo gold plated jawel set', '₹190', 'img/Allo_gold_platedog.jpg', 'All', 'rent', 'Jewellery set is suitable for various occasions like party, wedding, engagement, anniversary, outfit, birthday,valentines day and for brides. If you dress this gorgeous necklace for anywhere, you will surely get tons of compliments on multiple occasions')">  <h3> Allo gold plated jawel set</h3>
-                <p>Rent per day :₹190 </p>
+            <div class="service-item" data-available="false">
+                <img src="img/Allo_gold_plated.webp" alt="Allo gold plated jawel set" onclick="viewProduct('Allo gold plated jawel set', 'Allo gold plated jawel set', '₹190', 'img/Allo_gold_platedog.webp', 'All', 'rent', 'Jewellery set is suitable for various occasions like party, wedding, engagement, anniversary, outfit, birthday, valentines day and for brides. If you dress this gorgeous necklace for anywhere, you will surely get tons of compliments on multiple occasions')">
+                <h3>Allo gold plated jawel set</h3>
+                <p>Rent per day: ₹190</p>
                 <button onclick="orderNow('Allo gold plated jawel set')">Order Now</button>
             </div>
-            <div class="service-item">
+            <div class="service-item" data-available="false">
                 <img src="img/blue_bridal_lehenga.jpg" alt="Bridal lehenga" onclick="viewProduct('Bridal lehenga', 'Bridal lehenga', '₹390', 'img/blue_bridal_lehengaog.jpg', 'M', 'rent', 'Royal bridal lehenga for weddings and events.')">
                 <h3>Bridal lehenga</h3>
                 <p>Rent per day: ₹390</p>
                 <button onclick="orderNow('Bridal lehenga')">Order Now</button>
             </div>
-            <div class="service-item">
-                <img src="img/Gold_plated_diamond.jpg" alt="Gold plated diamond" onclick="viewProduct('Gold plated diamond', 'Gold plated diamond', '₹150', 'img/Gold_plated_diamond.jpg', 'All', 'rent', 'Jewellery set is suitable for various occasions like party, wedding, engagement, anniversary, outfit, birthday,valentines day and for brides. If you dress this gorgeous necklace for anywhere, you will surely get tons of compliments on multiple occasions.')">
+            <div class="service-item" data-available="false">
+                <img src="img/Gold_plated_diamond.jpg" alt="Gold plated diamond" onclick="viewProduct('Gold plated diamond', 'Gold plated diamond', '₹150', 'img/Gold_plated_diamond.jpg', 'All', 'rent', 'Jewellery set is suitable for various occasions like party, wedding, engagement, anniversary, outfit, birthday, valentines day and for brides. If you dress this gorgeous necklace for anywhere, you will surely get tons of compliments on multiple occasions.')">
                 <h3>Gold plated diamond</h3>
                 <p>Rent per day: ₹150</p>
                 <button onclick="orderNow('Gold plated diamond')">Order Now</button>
             </div>
-            <div class="service-item">
-                <img src="img/Kalamkari_lehenga.jpg" alt="Jeans" onclick="viewProduct('Kalamkari lehenga', 'Kalamkari lehenga', '₹299', 'img/Kalamkari_lehengaog.jpg', 'M', 'buy', 'Kalamkari Print With Foil Work Border ,Blouse Work : Printed With Foil Work Border ,Dupatta Work : Kalamkari Print With Gotta Patti Lace Border Also Comes With Tassels for kalamkari.')">
+            <div class="service-item" data-available="false">
+                <img src="img/Kalamkari_lehenga.jpg" alt="Kalamkari lehenga" onclick="viewProduct('Kalamkari lehenga', 'Kalamkari lehenga', '₹299', 'img/Kalamkari_lehengaog.jpg', 'M', 'buy', 'Kalamkari Print With Foil Work Border, Blouse Work: Printed With Foil Work Border, Dupatta Work: Kalamkari Print With Gotta Patti Lace Border Also Comes With Tassels for kalamkari.')">
                 <h3>Kalamkari lehenga</h3>
-                <p>Rent per day: ₹299</p>
+                <p>Price: ₹299</p>
                 <button onclick="orderNow('Kalamkari lehenga')">Order Now</button>
             </div>
-            <div class="service-item">
-                <img src="img/Lehenga_choli silk.jpg" alt="Shirt" onclick="viewProduct('Lehenga Set', 'Lehenga Set', '₹400', 'img/Lehenga_choli silkog.jpg', 'M', 'rent', 'Luxurious Art Silk Lehenga & Choli: The lehenga and choli are made from premium art silk, providing comfort and elegance. Beautiful Sequins Embroidery: The delicate embroidery work enhances the beauty of this lehenga choli, adding a shimmering effect. Unstitched Blouse Piece: The unstitched blouse piece (1 meter) allows you to customize the blouse for a perfect fit. Free Size Lehenga: The lehenga fits waist sizes up to 43 inches and has a length of 42 inches, perfect for most body types. Elegant Net Dupatta: A flowy, soft dupatta (2.25 meters) completes the look with its lightweight design. Round Neck Choli Design: Classic round neck design for a traditional and stylish appearance.   For silk.')">
+            <div class="service-item" data-available="false">
+                <img src="img/Lehenga_choli silk.jpg" alt="Lehenga Set" onclick="viewProduct('Lehenga Set', 'Lehenga Set', '₹400', 'img/Lehenga_choli silkog.jpg', 'M', 'rent', 'Luxurious Art Silk Lehenga & Choli: The lehenga and choli are made from premium art silk, providing comfort and elegance. Beautiful Sequins Embroidery: The delicate embroidery work enhances the beauty of this lehenga choli, adding a shimmering effect. Unstitched Blouse Piece: The unstitched blouse piece (1 meter) allows you to customize the blouse for a perfect fit. Free Size Lehenga: The lehenga fits waist sizes up to 43 inches and has a length of 42 inches, perfect for most body types. Elegant Net Dupatta: A flowy, soft dupatta (2.25 meters) completes the look with its lightweight design. Round Neck Choli Design: Classic round neck design for a traditional and stylish appearance.')">
                 <h3>Lehenga Set</h3>
                 <p>Rent per day: ₹400</p>
                 <button onclick="orderNow('Lehenga Set')">Order Now</button>
             </div>
-            <div class="service-item">
-                <img src="img/party_wear_jawel.jpg" alt="fancy Jewellery Set" onclick="viewProduct('fancy Jewellery Set', 'fancy Jewellery Set', '₹130', 'img/party_wear_jawel.jpg', 'all', 'rent', 'Jewellery set is suitable for various occasions like party, wedding, engagement, anniversary, outfit, birthday, valentines day and for brides  ')">
+            <div class="service-item" data-available="false">
+                <img src="img/party_wear_jawel.jpg" alt="fancy Jewellery Set" onclick="viewProduct('fancy Jewellery Set', 'fancy Jewellery Set', '₹130', 'img/party_wear_jawel.jpg', 'all', 'rent', 'Jewellery set is suitable for various occasions like party, wedding, engagement, anniversary, outfit, birthday, valentines day and for brides.')">
                 <h3>fancy Jewellery Set</h3>
                 <p>Rent per day: ₹130</p>
                 <button onclick="orderNow('fancy Jewellery Set')">Order Now</button>
             </div>
-            <div class="service-item">
+            <div class="service-item" data-available="true">
                 <img src="img/man_kurta_set.jpg" alt="Man kurta set" onclick="viewProduct('Man kurta Set', 'Man kurta Set', '₹399', 'img/man_kurta_set.jpg', 'L', 'rent', 'Best kurta set for man go get it and shine buddy')">
                 <h3>Man kurta set</h3>
                 <p>Rent per day: ₹399</p>
                 <button onclick="orderNow('Man kurta set')">Order Now</button>
             </div>
-<div class="service-item">
+            <div class="service-item" data-available="true">
                 <img src="img/red_dresh.webp" alt="New dresh for girls" onclick="viewProduct('New dresh for girls', 'New dresh for girls', '₹399', 'img/red_dresh.webp', 'm', 'rent', 'Beautiful dress for special occasions ')">
                 <h3>New dresh for girls</h3>
                 <p>Rent per day: ₹399</p>
                 <button onclick="orderNow('New dresh for girls')">Order Now</button>
             </div>
-            <div class="service-item">
-                <img src="img/white_dresh.webp" alt="New white dresh for girls" onclick="viewProduct('New white dresh for girls', 'New white dresh for girls', '₹399', 'img/white_dresh.webp', 'm', 'rent', 'Beautiful white  dress for special occasions ')">
-                <h3>New white dresh for girls</h3>
+            <div class="service-item" data-available="true">
+                <img src="img/white_dresh.webp" alt=" New pink dresh for girls"onclick="viewProduct('New pink dresh for girls','New pink dresh for girls','399','img/white_dresh.webp','m','rent','Beautiful drsh for special occasions')">
                 <p>Rent per day: ₹399</p>
-                <button onclick="orderNow('New white dresh for girls')">Order Now</button>
+                <button onclick="orderNow('New pink dresh for girls')">Order Now</button>
             </div>
         </div>
     </section>
@@ -157,20 +150,15 @@
         <h2>Contact Us</h2>
         <p>Reach us for bookings within 10-15 km!</p>
         <p>Founders: Bunny, Satish Verma, Karan Vaghel</p>
-        <p>Email: <a href="kunalanseeta@gmail.com"><span class="__cf_email__" data-cfemail="1b7068707877746f7372757c5b7c767a727735787476">[email&#160;protected]</span></a> | Phone: +91 9981971917, 7869074078, 8349747627</p>
+        <p>Email: <a href="mailto:kunalanseeta@gmail.com"></p>
     </section>
 
     <!-- Footer -->
     <footer>
-        <P> for every product you rent,you will need to provide an appropriate security deposit.</P>
+        <p>For every product you rent, you will need to provide an appropriate security deposit.</p>
         <p>© 2025 KSK Wear & Care. All rights reserved.</p>
-
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="chndu.js"></script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9310d99ee8c5bd25',t:'MTc0NDc3NjgwNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93135eeba9411d6a',t:'MTc0NDgwMzIzNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'931a8a3f9c1f53ed',t:'MTc0NDg3ODQxMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
