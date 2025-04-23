@@ -21,24 +21,28 @@
     <section id="order-form">
         <h2>Place Your Order</h2>
         <form id="orderForm">
-            <label for="item">Selected Item:</label><br>
-            <input type="text" id="item" name="item" readonly><br><br>
-            <label for="name">Full Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-            <label for="address">Address:</label><br>
-            <textarea id="address" name="address" required></textarea><br><br>
-            <label for="phone">Phone Number:</label><br>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
-            <label for="payment">Payment Method:</label><br>
+            <label for="item">Selected Item:</label>
+            <input type="text" id="item" name="item" readonly>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            <label for="order-date">Order Date:</label>
+            <input type="date" id="order-date" name="order-date" required>
+            <label for="order-time">Order Time:</label>
+            <input type="time" id="order-time" name="order-time" required>
+            <label for="payment">Payment Method:</label>
             <select id="payment" name="payment" required>
                 <option value="cash">Cash on Delivery</option>
                 <option value="upi">UPI (Razorpay)</option>
                 <option value="card">Credit/Debit Card (Razorpay)</option>
-            </select><br><br>
+            </select>
             <div class="button-group">
-                <button type="submit">Confirm Order </button>
+                <button type="submit">Confirm Order</button>
                 <button type="button" onclick="chatWithUs()">Chat with Us</button>
-                <button type="button" id="" onclick="thanks for order" disabled>Thanks for order</button>
+                <button type="button" id="thanks-button" disabled>Thanks for Order</button>
             </div>
         </form>
         <p id="message"></p>
@@ -47,8 +51,5 @@
         <p>© 2025 KSK Wear & Care. All rights reserved.</p>
     </footer>
     <script src="chndu.js"></script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9310d99f3d21bd11',t:'MTc0NDc3NjgwNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93135eeb9bc5afbc',t:'MTc0NDgwMzIzNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'931a8a3f98ff44e1',t:'MTc0NDg3ODQxMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
