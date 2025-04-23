@@ -4,7 +4,7 @@ function orderNow(item) {
 }
 
 function viewProduct(name, title, price, image, size, type, description) {
-    localStorage.setItem('selectedProduct', JSON.stringify({ name, title, price, image,  size, type, description }));
+    localStorage.setItem('selectedProduct', JSON.stringify({ name, title, price, image, size, type, description }));
     window.location.href = 'product.html';
 }
 
@@ -31,14 +31,16 @@ document.getElementById('orderForm')?.addEventListener('submit', function(e) {
     const name = document.getElementById('name').value;
     const address = document.getElementById('address').value;
     const phone = document.getElementById('phone').value;
+    const orderDate = document.getElementById('order-date').value;
+    const orderTime = document.getElementById('order-time').value;
     const payment = document.getElementById('payment').value;
     const item = localStorage.getItem('selectedItem');
 
-    if (name && address && phone && payment) {
+    if (name && address && phone && orderDate && orderTime && payment) {
         if (payment === 'upi' || payment === 'card') {
             payWithRazorpay();
         } else {
-            const message = `Order Details:\nItem: ${item}\nName: ${name}\nAddress: ${address}\nPhone: ${phone}\nPayment: ${payment}`;
+            const message = `Order Details:\nItem: ${item}\nName: ${name}\nAddress: ${address}\nPhone: ${phone}\nOrder Date: ${orderDate}\nOrder Time: ${orderTime}\nPayment: ${payment}`;
             const phoneNumber = "9981971917";
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
@@ -46,7 +48,7 @@ document.getElementById('orderForm')?.addEventListener('submit', function(e) {
             document.getElementById('orderForm').reset();
         }
     } else {
-        document.getElementById('message').innerText = 'are dost pura fill kro yr';
+        document.getElementById('message').innerText = 'Are dost pura form fill kar yr!';
     }
 });
 
@@ -67,6 +69,16 @@ window.onload = function() {
         document.getElementById('order-button').onclick = () => orderNow(name);
         loadReviews(name);
     }
+
+    // Disable buttons for unavailable products
+    document.querySelectorAll('.service-item').forEach(item => {
+        const button = item.querySelector('button');
+        const isAvailable = item.dataset.available !== 'false';
+        if (!isAvailable) {
+            button.disabled = true;
+            button.innerText = 'Out of Stock';
+        }
+    });
 };
 
 function submitReview() {
@@ -82,7 +94,7 @@ function submitReview() {
         document.getElementById('rating').value = '5';
         loadReviews(product);
     } else {
-        alert('are bhala manus pahila review fill to kri d firi submit krje');
+        alert('Are bhala manus, pahila review fill kar fir submit kar!');
     }
 }
 
