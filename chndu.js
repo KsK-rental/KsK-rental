@@ -1,5 +1,12 @@
 function orderNow(item) {
+    // Get price from the service-item
+    const serviceItem = Array.from(document.querySelectorAll('.service-item')).find(
+        el => el.querySelector('h3').innerText === item || el.querySelector('button').getAttribute('onclick').includes(`'${item}'`)
+    );
+    const priceText = serviceItem?.querySelector('p').innerText;
+    const price = priceText ? parseFloat(priceText.match(/₹(\d+)/)[1]) * 100 : 100; // Convert to paise
     localStorage.setItem('selectedItem', item);
+    localStorage.setItem('selectedItemPrice', price);
     window.location.href = 'order.html';
 }
 
@@ -15,15 +22,34 @@ function chatWithUs() {
     window.open(whatsappUrl, '_blank');
 }
 
-// 🧾 All products redirect to same Razorpay link
-const razorpayLink = "https://razorpay.me/@bunnyksk";
-
-function payWithRazorpay() {
-    if (razorpayLink) {
-        window.open(razorpayLink, "_blank");
-    } else {
-        alert("Payment link is not available. Contact support.");
-    }
+function payWithRazorpay(item, price, name, phone) {
+    const options = {
+        key: 'rzp_test_5WWeuoVN8AvZXQ', // Replace with your Razorpay Key ID
+        amount: price, // Price in paise
+        currency: 'INR',
+        name: 'KSK Wear & Care',
+        description: `Order for ${item}`,
+    
+        handler: function (response) {
+            document.getElementById('message').innerText = 'Payment successful! Order confirmed.';
+            document.getElementById('orderForm').reset();
+            document.getElementById('thanks-button').disabled = false;
+        },
+        prefill: {
+            name: name,
+            contact: phone
+        },
+        theme: {
+            color: '#ff4d4d'
+        },
+        modal: {
+            ondismiss: function() {
+                document.getElementById('message').innerText = 'Payment cancelled. Please try again.';
+            }
+        }
+    };
+    const rzp = new Razorpay(options);
+    rzp.open();
 }
 
 document.getElementById('orderForm')?.addEventListener('submit', function(e) {
@@ -35,12 +61,13 @@ document.getElementById('orderForm')?.addEventListener('submit', function(e) {
     const orderTime = document.getElementById('order-time').value;
     const payment = document.getElementById('payment').value;
     const item = localStorage.getItem('selectedItem');
+    const price = parseInt(localStorage.getItem('selectedItemPrice'));
 
-    if (name && address && phone && orderDate && orderTime && payment) {
+    if (name && address && phone && orderDate && orderTime && payment && item && price) {
         if (payment === 'upi' || payment === 'card') {
-            payWithRazorpay();
+            payWithRazorpay(item, price, name, phone);
         } else {
-            const message = `Order Details:\nItem: ${item}\nName: ${name}\nAddress: ${address}\nPhone: ${phone}\nOrder Date: ${orderDate}\nOrder Time: ${orderTime}\nPayment: ${payment}`;
+            const message = `Order Details:\nItem: ${item}\nName: ${name}\nAddress: ${address}\nPhone: ${phone}\nOrder Date: ${orderDate}\nOrder Time: ${orderTime}\nPayment: ${payment}\nPrice: ₹${price / 100}`;
             const phoneNumber = "9981971917";
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
@@ -54,8 +81,12 @@ document.getElementById('orderForm')?.addEventListener('submit', function(e) {
 
 window.onload = function() {
     const item = localStorage.getItem('selectedItem');
+    const price = localStorage.getItem('selectedItemPrice');
     if (item && document.getElementById('item')) {
         document.getElementById('item').value = item;
+    }
+    if (price && document.getElementById('item-price')) {
+        document.getElementById('item-price').value = price;
     }
 
     const product = localStorage.getItem('selectedProduct');
