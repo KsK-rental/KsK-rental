@@ -7,26 +7,29 @@
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #f9f9f9;
+    color: #2d2d2d;
+    overflow-x: hidden;
 }
 
 header {
-    background: linear-gradient(135deg, #ff4d4d, #1a1a1a);
+    background: linear-gradient(135deg, #ff2e63, #ffd700);
     color: white;
     text-align: center;
-    padding: 2rem 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 2.5rem 1rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     position: sticky;
     top: 0;
     z-index: 1000;
+    animation: fadeInDown 0.5s ease-in-out;
 }
 
 header h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2.8rem;
-    letter-spacing: 2px;
+    font-size: 3rem;
+    letter-spacing: 3px;
     text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 nav ul {
@@ -36,98 +39,121 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    margin: 0 1.2rem;
+    margin: 0 1.5rem;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: 700;
     position: relative;
-    transition: color 0.3s ease;
+    transition: color 0.4s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1a1a1a;
+    transform: translateY(-2px);
 }
 
 nav ul li a::after {
     content: '';
     position: absolute;
     width: 0;
-    height: 2px;
-    background: #ffd700;
-    bottom: -5px;
+    height: 3px;
+    background: #1a1a1a;
+    bottom: -6px;
     left: 0;
-    transition: width 0.3s ease;
+    transition: width 0.4s ease;
 }
 
 nav ul li a:hover::after {
     width: 100%;
 }
 
-nav ul li a:hover {
-    color: #ffd700;
-}
-
 section {
-    padding: 3rem 1.5rem;
+    padding: 4rem 2rem;
     text-align: center;
 }
 
 #home {
-    background: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
+    background: url('https://images.unsplash.com/photo-1519742866993-66d3cfef4bbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
     color: white;
-    padding: 4rem 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    padding: 5rem 2rem;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
     background-attachment: fixed;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#home h2.welcome-text,
+#home p.tagline {
+    position: relative;
+    z-index: 2;
 }
 
 #home h2.welcome-text {
     font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    transition: transform 0.4s ease, color 0.4s ease;
 }
 
 #home h2.welcome-text:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     color: #ffd700;
 }
 
 #home p.tagline {
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin: 1.5rem auto;
+    font-size: 1.3rem;
+    max-width: 900px;
+    margin: 2rem auto;
     background: rgba(0, 0, 0, 0.7);
-    padding: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    animation: slideInUp 0.8s ease-in-out;
 }
 
 #services {
-    background-color: #fff;
-    padding-bottom: 4rem;
+    background: linear-gradient(180deg, #ffffff, #f5f5f5);
+    padding-bottom: 5rem;
 }
 
 .service-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-    padding: 0 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+    padding: 0 1.5rem;
 }
 
 .service-item {
     background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
     position: relative;
     overflow: hidden;
+    animation: fadeInUp 0.6s ease-in-out;
 }
 
 .service-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-12px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
 }
 
 .service-item::before {
@@ -136,89 +162,92 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #ff4d4d, #ffd700);
-    transition: height 0.3s ease;
+    height: 5px;
+    background: linear-gradient(90deg, #ff2e63, #ffd700);
+    transition: height 0.4s ease;
 }
 
 .service-item:hover::before {
-    height: 8px;
+    height: 10px;
 }
 
 .service-item img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 15px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease, filter 0.4s ease;
 }
 
 .service-item img:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
+    filter: brightness(1.1);
 }
 
 .service-item h3 {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    margin: 1rem 0 0.5rem;
+    font-size: 1.7rem;
+    margin: 1.2rem 0 0.6rem;
     color: #1a1a1a;
 }
 
 .service-item p {
-    color: #666;
-    font-size: 1rem;
-    margin-bottom: 1rem;
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
 }
 
 .service-item button {
-    background: linear-gradient(135deg, #ff4d4d, #e63946);
+    background: linear-gradient(135deg, #ff2e63, #e63946);
     color: white;
     border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0.9rem 1.8rem;
+    border-radius: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: 700;
     width: 100%;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: background 0.4s ease, transform 0.3s ease;
 }
 
 .service-item button:hover {
-    background: linear-gradient(135deg, #e63946, #d00000);
-    transform: translateY(-3px);
+    background: linear-gradient(135deg, #e63946, #c71585);
+    transform: translateY(-4px);
 }
 
 .service-item button:disabled {
-    background: #ccc;
-    color: #666;
+    background: #d3d3d3;
+    color: #888;
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
 }
 
 #contact {
-    background: linear-gradient(135deg, #1a1a1a, #ff4d4d);
+    background: linear-gradient(135deg, #1a1a1a, #ff2e63);
     color: white;
-    padding: 3rem 1.5rem;
+    padding: 4rem 2rem;
+    animation: fadeIn 1s ease-in-out;
 }
 
 #contact h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
 }
 
 #contact p {
-    font-size: 1.1rem;
-    margin: 0.8rem 0;
+    font-size: 1.2rem;
+    margin: 1rem 0;
 }
 
 #contact a {
     color: #ffd700;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-weight: 600;
+    transition: color 0.4s ease;
 }
 
 #contact a:hover {
@@ -229,24 +258,27 @@ footer {
     background: #1a1a1a;
     color: white;
     text-align: center;
-    padding: 1.5rem;
-    font-size: 0.9rem;
+    padding: 1.8rem;
+    font-size: 1rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
 }
 
 #order-form {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    animation: fadeInUp 0.8s ease-in-out;
 }
 
 #order-form label {
     display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    font-size: 1rem;
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+    font-size: 1.1rem;
     color: #1a1a1a;
 }
 
@@ -254,64 +286,65 @@ footer {
 #order-form textarea,
 #order-form select {
     width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
+    padding: 0.9rem;
+    margin-bottom: 1.2rem;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 #order-form input:focus,
 #order-form textarea:focus,
 #order-form select:focus {
-    border-color: #ff4d4d;
+    border-color: #ff2e63;
+    box-shadow: 0 0 8px rgba(255, 46, 99, 0.3);
     outline: none;
 }
 
 #order-form textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 120px;
 }
 
 #order-form select:disabled {
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
 #order-form button {
-    background: linear-gradient(135deg, #ff4d4d, #e63946);
+    background: linear-gradient(135deg, #ff2e63, #e63946);
     color: white;
     border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0.9rem 2rem;
+    border-radius: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: 700;
     width: 100%;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: background 0.4s ease, transform 0.3s ease;
 }
 
 #order-form button:hover {
-    background: linear-gradient(135deg, #e63946, #d00000);
-    transform: translateY(-3px);
+    background: linear-gradient(135deg, #e63946, #c71585);
+    transform: translateY(-4px);
 }
 
 #order-form button:disabled {
-    background: #ccc;
+    background: #d3d3d3;
     cursor: not-allowed;
 }
 
 #order-form #message {
-    margin-top: 1rem;
+    margin-top: 1.2rem;
     color: #1a1a1a;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .button-group {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.2rem;
 }
 
 #order-form button#razorpay-button {
@@ -332,28 +365,34 @@ footer {
 
 /* Product Detail Page Styles */
 .product-detail {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 2rem;
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 2.5rem;
     background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 0.8s ease-in-out;
 }
 
 .product-box {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
     align-items: center;
     flex-wrap: wrap;
 }
 
 .product-box img {
     width: 100%;
-    max-width: 350px;
+    max-width: 400px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 15px;
     object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease;
+}
+
+.product-box img:hover {
+    transform: scale(1.05);
 }
 
 .product-info {
@@ -363,137 +402,159 @@ footer {
 
 .product-info h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
     color: #1a1a1a;
 }
 
 .product-info p {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1rem;
 }
 
 .product-info button {
-    background: linear-gradient(135deg, #ff4d4d, #e63946);
+    background: linear-gradient(135deg, #ff2e63, #e63946);
     color: white;
     border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0.9rem 2rem;
+    border-radius: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: 700;
     width: 100%;
-    max-width: 300px;
-    transition: background 0.3s ease, transform 0.2s ease;
+    max-width: 350px;
+    transition: background 0.4s ease, transform 0.3s ease;
 }
 
 .product-info button:hover {
-    background: linear-gradient(135deg, #e63946, #d00000);
-    transform: translateY(-3px);
+    background: linear-gradient(135deg, #e63946, #c71585);
+    transform: translateY(-4px);
 }
 
 .reviews {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
 }
 
 .reviews h3 {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
 }
 
 .review-item {
     border-bottom: 1px solid #eee;
-    padding: 1rem 0;
+    padding: 1.2rem 0;
 }
 
 .review-item p {
-    margin: 0.5rem 0;
+    margin: 0.6rem 0;
     color: #333;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .review-form {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
 }
 
 .review-form h4 {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.7rem;
+    margin-bottom: 1.2rem;
 }
 
 .review-form textarea {
     width: 100%;
-    height: 120px;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
+    height: 140px;
+    padding: 0.9rem;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .review-form textarea:focus {
-    border-color: #ff4d4d;
+    border-color: #ff2e63;
+    box-shadow: 0 0 8px rgba(255, 46, 99, 0.3);
     outline: none;
 }
 
 .review-form select {
     width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    font-size: 1rem;
+    padding: 0.9rem;
+    margin-bottom: 1.2rem;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    font-size: 1.1rem;
 }
 
 .review-form button {
     background: linear-gradient(135deg, #ffd700, #d4a017);
     color: #1a1a1a;
     border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0.9rem 2rem;
+    border-radius: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: 700;
     width: 100%;
-    max-width: 300px;
-    transition: background 0.3s ease, transform 0.2s ease;
+    max-width: 350px;
+    transition: background 0.4s ease, transform 0.3s ease;
 }
 
 .review-form button:hover {
     background: linear-gradient(135deg, #d4a017, #b38f2c);
-    transform: translateY(-3px);
+    transform: translateY(-4px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     nav ul li {
-        margin: 0 0.8rem;
+        margin: 0 1rem;
     }
 
     nav ul li a {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     #home h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     #home p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .service-container {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 2rem;
     }
 
     .service-item {
@@ -514,58 +575,58 @@ footer {
     }
 
     .product-info h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .reviews h3 {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
 
     #order-form {
-        padding: 1.5rem;
-        max-width: 90%;
+        padding: 2rem;
+        max-width: 95%;
     }
 
     #contact h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     #contact p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 }
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     nav ul li {
-        margin: 0 0.5rem;
+        margin: 0 0.6rem;
     }
 
     nav ul li a {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     #home h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     #home p {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .service-item img {
-        height: 180px;
+        height: 200px;
     }
 
     .service-item h3 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     .service-item button {
-        padding: 0.7rem 1.2rem;
-        font-size: 0.9rem;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
     }
 }
